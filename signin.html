@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In - Home Services Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .sign-in-container {
+            width: 350px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sign-in-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .sign-in-container input[type="text"],
+        .sign-in-container input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .sign-in-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6cbda3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .sign-in-container button:hover {
+            background-color: #5aa78f;
+        }
+
+        .sign-in-container .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .sign-in-container .back-to-home a {
+            color: #6cbda3;
+            text-decoration: none;
+        }
+
+        .sign-in-container .back-to-home a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sign-in-container">
+        <h2>Sign In</h2>
+        <div id="error-message" class="error-message"></div>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="signIn()">Sign In</button>
+        <div class="back-to-home">
+            <a href="buy.html">Back to Home</a>
+        </div>
+	<div class="back-to-home">
+            <a href="signup.html">Don't Have an Account</a>
+        </div>
+    </div>
+
+    <script>
+        function signIn() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessageDiv = document.getElementById('error-message');
+
+            // Simple client-side validation (replace with server-side in real app)
+            if (!username || !password) {
+                errorMessageDiv.textContent = 'Please enter both username and password.';
+                return;
+            }
+
+            // Simple username and password check (replace with proper authentication)
+            if (username === 'user' && password === 'pass') {
+                errorMessageDiv.textContent = '';
+                alert('Sign in successful!');
+                window.location.href = "buy.html"; // Redirect to home or user profile page
+            } else {
+                errorMessageDiv.textContent = 'Invalid username or password.';
+            }
+
+        }
+    </script>
+</body>
+</html>

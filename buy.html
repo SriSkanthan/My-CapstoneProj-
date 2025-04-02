@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomeHelpers</title>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f7e6;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  color: white;
+}
+
+.header-container img {
+  height: 40px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar .a {
+  padding: 8px 15px;
+  background-color: #66bb6a;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.navbar .a:hover {
+  background-color: #388e3c;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background: #a5d6a7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.service {
+  position: absolute;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.service.active {
+  opacity: 1;
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.service-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.review-section {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #dcedc8;
+  border-radius: 10px;
+}
+
+.review {
+  margin-bottom: 15px;
+}
+
+.about-section {
+  margin-top: 30px;
+  padding: 40px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+}
+
+.about-section p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+</style>
+<script>
+let index = 0;
+function rotateServices() {
+  const cards = document.querySelectorAll('.service-slider');
+  cards.forEach(slider => {
+    const services = slider.children;
+    for (let i = 0; i < services.length; i++) {
+      services[i].classList.remove('active');
+    }
+    services[index % services.length].classList.add('active');
+  });
+  index++;
+}
+setInterval(rotateServices, 3000);
+</script>
+</head>
+<body>
+
+<div class="header-container">
+  <a href="buy.html"><img src="hh.jpg" alt="HomeHelpers"></a>
+  <ul class="navbar">
+    <li><a href="buy.html" class="a">Home</a></li>
+    <li><a href="buyAbout.html" class="a">About</a></li>
+    <li><a href="signin.html" class="a">Sign-in</a></li>
+  </ul>
+</div>
+
+<div class="main-container">
+  <div class="card">
+    <div class="service-slider">
+      <a href="buy_service1.html" class="service active"><img src="cleaning.jpg" alt="Cleaning Service"></a>
+      <a href="buy_service1.html" class="service"><img src="plumbing.jpg" alt="Plumbing Service"></a>
+      <a href="buy_service1.html" class="service"><img src="electrical.jpg" alt="Electrical Repair"></a>
+    </div>
+    <h3>Our Top Services</h3>
+    <p class="service-description">Reliable home cleaning, expert plumbing, and professional electrical repair services at your doorstep.</p>
+  </div>
+
+  <div class="card">
+    <div class="service-slider">
+      <a href="buy_service2.html" class="service active"><img src="painting.jpg" alt="Painting"></a>
+      <a href="buy_service2.html" class="service"><img src="carpenting.jpg" alt="Carpentry"></a>
+      <a href="buy_service2.html" class="service"><img src="gardening.jpg" alt="Gardening"></a>
+    </div>
+    <h3>More Professional Help</h3>
+    <p class="service-description">Transform your space with skilled painters, carpenters, and garden care experts.</p>
+  </div>
+
+  <div class="card">
+    <div class="service-slider">
+      <a href="buy_service3.html" class="service active"><img src="acRepair.jpg" alt="AC Service"></a>
+      <a href="buy_service3.html" class="service"><img src="pest.jpg" alt="Pest Control"></a>
+      <a href="buy_service3.html" class="service"><img src="roofing.jpg" alt="Roofing"></a>
+    </div>
+    <h3>Other Essential Services</h3>
+    <p class="service-description">Keep your home in top shape with AC Service, pest control, and roofing services.</p>
+  </div>
+</div>
+
+<div class="review-section">
+  <h2>Customer Reviews</h2>
+  <div class="review">
+    <p><strong>John Doe</strong> ⭐⭐⭐⭐⭐</p>
+    <p>"Excellent service! Very professional and efficient. Highly recommended!"</p>
+  </div>
+  <div class="review">
+    <p><strong>Jane Smith</strong> ⭐⭐⭐⭐⭐</p>
+    <p>"Quick response and great work. Will definitely use again."</p>
+  </div>
+  <div class="review">
+    <p><strong>Emily Johnson</strong> ⭐⭐⭐⭐⭐</p>
+    <p>"Affordable and high-quality services. Totally worth it!"</p>
+  </div>
+</div>
+
+<div class="about-section">
+  <h2>About Us</h2>
+  <p>HomeHelpers is dedicated to providing top-notch home maintenance and repair services with trusted professionals.</p>
+</div>
+
+<div class="footer" style="text-align: center; padding: 10px; background-color: white; color: #4CAF50;">
+  <p>&copy; 2025 HomeHelpers. All Rights Reserved.</p>
+</div>
+</body>
+</html>

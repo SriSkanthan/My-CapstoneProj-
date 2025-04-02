@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buy Service - [Service Name]</title>
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7e6;
+            text-align: center;
+        }
+	
+	.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  color: white;
+}
+
+.header-container img {
+  height: 40px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar .a {
+  padding: 8px 15px;
+  background-color: #66bb6a;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.navbar .a:hover {
+  background-color: #388e3c;
+}
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #a5d6a7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .service-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .service-description {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #388e3c;
+            margin-bottom: 20px;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .buy-button:hover {
+            background-color: #388e3c;
+        }
+        
+        .objContainer{
+	    display:flex;
+	    justify-content:space-evenly;
+	}
+    </style>
+</head>
+<body>
+
+<div class="header-container">
+  <a href="buy.html"><img src="hh.jpg" alt="HomeHelpers"></a>
+  <ul class="navbar">
+    <li><a href="buy.html" class="a">Home</a></li>
+    <li><a href="about.html" class="a">About</a></li>
+    <li><a href="signin.html" class="a">Sign-in</a></li>
+  </ul>
+</div>
+
+
+<div class="objContainer">
+    <div class="container">
+        <h1 class="service-title">Painting</h1>
+        <img src="painting.jpg" alt="painting">
+        <p class="service-description">Paint must be provided by customer and this price is for 100sq.ft</p>
+        <p class="price">Price: ₹2000</p>
+        <a href="#" class="buy-button">Buy Now</a>
+    </div>
+    <div class="container">
+        <h1 class="service-title">Carpenting and Wood Works</h1>
+        <img src="carpenting.jpg" alt="carpenting">
+        <p class="service-description">Damaged doors, furniture and any wood works can be done. Price is per furniture.</p>
+        <p class="price">Price: ₹1000</p>
+        <a href="#" class="buy-button">Buy Now</a>
+    </div>
+    <div class="container">
+        <h1 class="service-title">Gardening</h1>
+        <img src="gardening.jpg" alt="gardening">
+        <p class="service-description">Planting sapling and adding fertilizers and manure can be done.Manure should be provided </p>
+        <p class="price">Price: ₹1000</p>
+        <a href="#" class="buy-button">Buy Now</a>
+    </div>
+</div>
+</body>
+</html>
